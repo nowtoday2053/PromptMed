@@ -3,353 +3,469 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MedPrompt - AI automation for medspas, surgeons, and aesthetic clinics. Instantly respond to leads and convert more clients with AI-powered chatbots and automation tools.">
-    <meta name="keywords" content="AI automation, medspa, aesthetic clinic, chatbot, lead generation, customer support, Instagram automation, WhatsApp automation">
-    <meta name="author" content="MedPrompt">
+    <meta name="description" content="MedPrompt - AI automation for medical aesthetics. Never lose a client again with 24/7 AI assistance.">
     <title>MedPrompt - AI Automation for Medical Aesthetics</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Framer Motion -->
+    <script src="https://unpkg.com/framer-motion@11/dist/framer-motion.js"></script>
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="nav">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>MedPrompt</h2>
+                <span>MedPrompt</span>
             </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#testimonials" class="nav-link">Testimonials</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#faq" class="nav-link">FAQ</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link cta-nav">Get Demo</a>
-                </li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#pricing" class="nav-link">Pricing</a>  
+                <a href="https://calendly.com/marionrexho/30min" class="nav-cta">Book a Call</a>
             </div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
+    <section class="hero">
+        <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Transform Your Medical Practice with AI Automation</h1>
-                <p class="hero-subtitle">MedPrompt helps medspas, surgeons, and aesthetic clinics respond to leads instantly across Instagram, WhatsApp, and websites. Convert more clients with our AI-powered automation tools.</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Get a Free Demo</a>
-                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                <div class="hero-badge">
+                    <span>🚀 AI-Powered Patient Communication</span>
+                </div>
+                <h1 class="hero-title">
+                    Never lose a client again.
+                    <span class="hero-subtitle-text">24/7 AI assistant.</span>
+                </h1>
+                <p class="hero-description">
+                    MedPrompt instantly responds to clients across all platforms, 
+                    turning missed messages into booked appointments.
+                </p>
+                <div class="hero-actions">
+                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                    <a href="https://calendly.com/marionrexho/30min" class="btn btn-primary">Book a Call</a>
+                    
+                    
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Medical professional using AI technology" />
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About MedPrompt</h2>
-                <p>Revolutionizing patient engagement through intelligent automation</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>At MedPrompt, we believe that every potential patient deserves immediate, personalized attention. Our AI-powered automation platform helps medical aesthetic practices respond to inquiries instantly, nurture leads effectively, and convert more prospects into loyal clients.</p>
-                    <p>We understand the unique challenges of the medical aesthetics industry - from managing multiple communication channels to providing detailed treatment information. Our solutions are specifically designed to address these needs while maintaining the personal touch that patients expect.</p>
-                    <div class="stats">
-                        <div class="stat">
-                            <h4>40%</h4>
-                            <p>Average increase in lead conversion</p>
-                        </div>
-                        <div class="stat">
-                            <h4>24/7</h4>
-                            <p>Instant response time</p>
-                        </div>
-                        <div class="stat">
-                            <h4>500+</h4>
-                            <p>Satisfied clients</p>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="chat-demo">
+                            <div class="message user">
+                                <p>Hi! What's the cost for Botox?</p>
+                            </div>
+                            <div class="message ai">
+                                <p>Botox starts at $12/unit. Most patients need 20-40 units. Would you like to book a consultation?</p>
+                            </div>
+                            <div class="message user">
+                                <p>Yes, what's available this week?</p>
+                            </div>
+                            <div class="message ai">
+                                <p>I have Tuesday 2pm or Friday 10am available. Which works better?</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Modern medical spa interior" />
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-container">
             <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Comprehensive AI automation solutions for your practice</p>
+                <h2>We Set It Up. You Get Clients.  </h2>
+                <p>Get your AI assistant running in minutes, not months.</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 12H16M8 8H16M8 16H12M6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-number">01</div>
+                    <div class="feature-content">
+                        <h3>Connect your platforms</h3>
+                        <p>Connect to Instagram, Imessage, Your Website and many more with one simple integration.</p>
+                        <div class="feature-visual">
+                            <div class="platforms">
+                                <div class="platform instagram">IG</div>
+                                <div class="platform whatsapp">WA</div>
+                                <div class="platform website">WEB</div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>AI Chatbots for Multiple Platforms</h3>
-                    <p>Deploy intelligent chatbots across Instagram, WhatsApp, and your website. Our AI understands medical aesthetics terminology and provides accurate, helpful responses to patient inquiries 24/7.</p>
-                    <ul>
-                        <li>Instagram DM automation</li>
-                        <li>WhatsApp Business integration</li>
-                        <li>Website chat widgets</li>
-                        <li>Multi-language support</li>
-                    </ul>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+
+                <div class="feature-card">
+                    <div class="feature-number">02</div>
+                    <div class="feature-content">
+                        <h3>Train with natural language</h3>
+                        <p>We train your AI how to respond using plain English, not complex code.</p>
+                        <div class="feature-visual">
+                            <div class="training-example">
+                                <div class="rule">
+                                    <span class="trigger">When asked about pricing</span>
+                                    <span class="arrow">→</span>
+                                    <span class="action">Provide costs & offer consultation</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Automated Lead Generation</h3>
-                    <p>Capture and qualify leads automatically with smart forms and conversational flows. Our system identifies high-intent prospects and routes them to your team for immediate follow-up.</p>
-                    <ul>
-                        <li>Smart lead qualification</li>
-                        <li>Automated appointment booking</li>
-                        <li>Lead scoring and prioritization</li>
-                        <li>CRM integration</li>
-                    </ul>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+
+                <div class="feature-card">
+                    <div class="feature-number">03</div>
+                    <div class="feature-content">
+                        <h3>Monitor and improve</h3>
+                        <p>Your AI assistant books clients while you relax. Track real-time chats and conversions. </p>
+                        <div class="feature-visual">
+                            <div class="dashboard">
+                                <div class="stat">
+                                    <span class="number">24</span>
+                                    <span class="label">Active chats</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">93%</span>
+                                    <span class="label">Clients Converted</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>AI-Powered Customer Support</h3>
-                    <p>Provide exceptional patient support with AI that understands treatment procedures, pricing, and aftercare instructions. Escalate complex queries to human staff seamlessly.</p>
-                    <ul>
-                        <li>Treatment information database</li>
-                        <li>Pricing and package details</li>
-                        <li>Aftercare instructions</li>
-                        <li>Seamless human handoff</li>
-                    </ul>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Why MedPrompt?</h2>
+                <p>Focus on patient care, not communication infrastructure.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Email & SMS Automation</h3>
-                    <p>Nurture leads and maintain patient relationships with personalized email and SMS campaigns. Send appointment reminders, follow-ups, and promotional offers automatically.</p>
-                    <ul>
-                        <li>Personalized email sequences</li>
-                        <li>SMS appointment reminders</li>
-                        <li>Post-treatment follow-ups</li>
-                        <li>Promotional campaigns</li>
-                    </ul>
+                    <h3>Done-For-You Setup </h3>
+                    <p>We handle everything—no tech skills needed. You get a fully functional AI assistant without lifting a finger.</p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3> Instant Responses, 24/7.</h3>
+                    <p>Your AI never sleeps. It captures clients anytime, day or night, and responds instantly to turn visitors into paying clients. </p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Works Across All Platforms</h3>
+                    <p>We integrate your chatbot with Instagram, WhatsApp, websites, and more—so you never miss a lead, no matter where they contact you. </p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 3V21H21V3H3Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M9 9H15M9 13H15M9 17H15" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3> Tailored to Your Business </h3>
+                    <p>We train your AI in plain English—customizing responses for your services, FAQs, and pricing. </p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7.5V9M15 11.5C15.8 12.3 16 13.4 16 14.5V22H14V16H10V22H8V14.5C8 13.4 8.2 12.3 9 11.5L12 8.5L15 11.5Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>More Leads, More Clients</h3>
+                    <p>Our clients see an average 340% increase in bookings within 90 days because our AI assistant engages with every client, answers instantly, and never lets a potential client slip through the cracks. </p>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 12L5 10L9 14L19 4L21 6L9 18L3 12Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 2C17.5 2 22 6.5 22 12S17.5 22 12 22S2 17.5 2 12S6.5 2 12 2Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Ongoing Support and Optimization</h3>
+                    <p>We don't just set it up and disappear. We monitor performance, fine-tune your AI responses, and help you get the most out of your assistant - to keep it converting more clients, week after week. </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
+    <section class="testimonials">
+        <div class="section-container">
             <div class="section-header">
-                <h2>What Our Clients Say</h2>
-                <p>Real results from real medical aesthetic practices</p>
+                <h2>Trusted By Leading Medical Practices.</h2>
+                <p>See how MedPrompt helps practices like yours get more bookings and grow revenue.</p>
             </div>
+            
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"MedPrompt helped us increase our lead conversion rate by 40% in just 30 days. The AI chatbot handles initial inquiries perfectly, and our staff can focus on providing excellent patient care."</p>
+                        <div class="stars">
+                            <span>★★★★★</span>
+                        </div>
+                        <p>"MedPrompt increased our consultation bookings by 230% in just 3 months. The AI handles patient inquiries so naturally; we love how it's transformed our business."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Dr. Sarah Johnson" />
+                        <div class="author-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23007aff'/%3E%3Ctext x='24' y='30' text-anchor='middle' fill='white' font-family='Arial' font-size='18' font-weight='bold'%3ESM%3C/text%3E%3C/svg%3E" alt="Dr. Sarah Martinez">
+                        </div>
                         <div class="author-info">
-                            <h4>Dr. Sarah Johnson</h4>
-                            <p>Founder, Radiance MedSpa</p>
+                            <h4>Dr. Sarah Martinez</h4>
+                            <p>Founder, Elite Aesthetics Miami</p>
+                            <span class="practice-size">12 locations</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"The Instagram automation feature is a game-changer. We now respond to DMs instantly, even outside business hours. Our booking rate from social media has tripled!"</p>
+                        <div class="stars">
+                            <span>★★★★★</span>
+                        </div>
+                        <p>"Before MedPrompt, we were losing 60% of Instagram clients because we couldn't respond fast enough. Thanks to MedPrompt, our assistant responds instantly and books consultations 24/7. Game changer!"</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Michael Chen" />
+                        <div class="author-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%235856d6'/%3E%3Ctext x='24' y='30' text-anchor='middle' fill='white' font-family='Arial' font-size='18' font-weight='bold'%3EMC%3C/text%3E%3C/svg%3E" alt="Michael Chen">
+                        </div>
                         <div class="author-info">
                             <h4>Michael Chen</h4>
-                            <p>Practice Manager, Elite Aesthetics</p>
+                            <p>Owner, Radiance Med Spa</p>
+                            <span class="practice-size">3 locations</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        <p>"MedPrompt's AI understands our treatments better than some of our staff! It provides accurate information about procedures and pricing, making our consultation process much more efficient."</p>
+                        <div class="stars">
+                            <span>★★★★★</span>
+                        </div>
+                        <p>"The ROI is incredible. MedPrompt pays for itself within the first week. Our team can focus on patient care while the AI handles all the initial inquiries and scheduling."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1594824475317-d3c2b8b7b3b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Dr. Amanda Rodriguez" />
+                        <div class="author-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23ff6b6b'/%3E%3Ctext x='24' y='30' text-anchor='middle' fill='white' font-family='Arial' font-size='18' font-weight='bold'%3EJR%3C/text%3E%3C/svg%3E" alt="Dr. Jessica Rodriguez">
+                        </div>
                         <div class="author-info">
-                            <h4>Dr. Amanda Rodriguez</h4>
-                            <p>Plastic Surgeon, Rodriguez Clinic</p>
+                            <h4>Dr. Jessica Rodriguez</h4>
+                            <p>Medical Director, Glow Dermatology</p>
+                            <span class="practice-size">Solo practice</span>
                         </div>
                     </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <span>★★★★★</span>
+                        </div>
+                        <p>"Setup took literally 15 minutes. The AI learned our pricing, procedures, and availability instantly. It's like having a perfect receptionist who never sleeps."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%2334d399'/%3E%3Ctext x='24' y='30' text-anchor='middle' fill='white' font-family='Arial' font-size='18' font-weight='bold'%3EAP%3C/text%3E%3C/svg%3E" alt="Dr. Amanda Park">
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Amanda Park</h4>
+                            <p>Founder, Luxe Plastic Surgery</p>
+                            <span class="practice-size">2 locations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <span>★★★★★</span>
+                        </div>
+                        <p>"Our patient satisfaction scores went up 40% because they get instant responses. MedPrompt handles complex questions about procedures better than most human staff."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23f59e0b'/%3E%3Ctext x='24' y='30' text-anchor='middle' fill='white' font-family='Arial' font-size='18' font-weight='bold'%3ERK%3C/text%3E%3C/svg%3E" alt="Dr. Robert Kim">
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Robert Kim</h4>
+                            <p>Chief Medical Officer, Rejuvenate Clinics</p>
+                            <span class="practice-size">8 locations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <span>★★★★★</span>
+                        </div>
+                        <p>"We were drowning in missed messages before MedPrompt. Now, our AI handles everything—Instagram, WhatsApp, the website—responding instantly and booking appointments for us. It feels like we have an extra team member working 24/7."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%239333ea'/%3E%3Ctext x='24' y='30' text-anchor='middle' fill='white' font-family='Arial' font-size='18' font-weight='bold'%3ELT%3C/text%3E%3C/svg%3E" alt="Dr. Lisa Thompson">
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Lisa Thompson</h4>
+                            <p>Owner, Serenity Wellness Center</p>
+                            <span class="practice-size">4 locations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-stats">
+                <div class="stat-item">
+                    <span class="stat-number">99+</span>
+                    <span class="stat-label">Trusted By Medical Practices</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">$789,000+</span>
+                    <span class="stat-label">Revenue Generated</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">340%</span>
+                    <span class="stat-label">Average Booking Increase</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.8</span>
+                    <span class="stat-label">Customer Rating</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
-        <div class="container">
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="section-container">
             <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Everything you need to know about MedPrompt</p>
+                <h2>Choose Your Plan</h2>
+                <p>Book a call to discuss which option works best for your business.</p>
             </div>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How does MedPrompt work?</h3>
-                        <span class="faq-toggle">+</span>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
                     </div>
-                    <div class="faq-answer">
-                        <p>MedPrompt integrates with your existing communication channels (Instagram, WhatsApp, website) and uses AI to automatically respond to patient inquiries. Our system is trained specifically for medical aesthetics, understanding treatments, pricing, and procedures to provide accurate information 24/7.</p>
-                    </div>
+                    <ul class="pricing-features">
+                        <li>100 conversations/month</li>
+                        <li>1 platform included</li>
+                        <li>Basic AI responses</li>
+                        <li>Email support</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="window.open('https://calendly.com/marionrexho/30min', '_blank')">Book a Call</button>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Is AI automation safe for medical practices?</h3>
-                        <span class="faq-toggle">+</span>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>                    
                     </div>
-                    <div class="faq-answer">
-                        <p>Absolutely. Our AI is designed to handle general inquiries and information sharing only. For medical advice or complex questions, the system automatically escalates to your human staff. We ensure HIPAA compliance and maintain strict data security standards.</p>
-                    </div>
+                    <ul class="pricing-features">
+                        <li>1,000 conversations/month</li>
+                        <li>All platforms included</li>
+                        <li>Advanced AI Responses</li>
+                        <li> AI follows up with leads automatically </li>
+                        <li>Dedicated support</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="window.open('https://calendly.com/marionrexho/30min', '_blank')">Book a Call</button>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How quickly can we see results?</h3>
-                        <span class="faq-toggle">+</span>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
                     </div>
-                    <div class="faq-answer">
-                        <p>Most clients see immediate improvements in response times and lead engagement. Significant increases in conversion rates typically occur within 2-4 weeks as the AI learns your specific practice patterns and patient preferences.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What kind of support do you provide?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We provide comprehensive onboarding, training for your staff, and ongoing technical support. Our team includes medical aesthetics specialists who understand your industry's unique needs and can customize the AI responses accordingly.</p>
-                    </div>
+                    <ul class="pricing-features">
+                        <li>Unlimited conversations</li>
+                        <li>All Platforms Included</li>
+                        <li>AI trained to sell for you</li>
+                        <li>Advanced AI insights</li>
+                        <li>Client qualification system</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="window.open('https://calendly.com/marionrexho/30min', '_blank')">Book a Call</button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section id="contact" class="cta-section">
-        <div class="container">
+    <section id="demo" class="cta">
+        <div class="section-container">
             <div class="cta-content">
-                <h2>Ready to Transform Your Practice?</h2>
-                <p>Join hundreds of medical aesthetic practices already using MedPrompt to grow their business. Get a free demo and see how AI automation can work for you.</p>
-            </div>
-            <div class="cta-form">
-                <form id="demo-form" class="demo-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="practice" name="practice" placeholder="Practice Name" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Tell us about your practice and goals" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Get Your Free Demo</button>
-                </form>
+                <h2>Ready to never lose a client again?</h2>
+                <p>Join hundreds of medical practices using AI to grow their business.</p>
+                <div class="cta-actions">
+                    <a href="https://calendly.com/marionrexho/30min" class="btn btn-primary">Book a Call</a>
+                    <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
+    <footer id="contact" class="footer">
+        <div class="footer-container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div class="footer-brand">
                     <h3>MedPrompt</h3>
-                    <p>AI automation solutions for medical aesthetic practices. Transform your patient engagement and grow your business with intelligent automation.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="LinkedIn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8V8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M6 9H2V21H6V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="Twitter">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M23 3C22.0424 3.67548 20.9821 4.19211 19.86 4.53C19.2577 3.83751 18.4573 3.34669 17.567 3.12393C16.6767 2.90116 15.7395 2.95718 14.8821 3.28445C14.0247 3.61173 13.2884 4.19445 12.773 4.95371C12.2575 5.71297 11.9877 6.61435 12 7.53V8.53C10.2426 8.57557 8.50127 8.18581 6.93101 7.39624C5.36074 6.60667 4.01032 5.43666 3 4C3 4 -1 13 8 17C5.94053 18.398 3.48716 19.099 1 19C10 24 21 19 21 7.5C20.9991 7.22145 20.9723 6.94359 20.92 6.67C21.9406 5.66349 22.6608 4.39271 23 3V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="Instagram">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
-                                <path d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61992 14.1902 8.22773 13.4229 8.09407 12.5922C7.9604 11.7615 8.09207 10.9099 8.47033 10.1584C8.84859 9.40685 9.45418 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87658 12.63 8C13.4789 8.12588 14.2649 8.52146 14.8717 9.1283C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="currentColor" stroke-width="2"/>
-                                <path d="M17.5 6.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
+                    <p>AI assistant for Businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#demo">Demo</a>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#services">AI Chatbots</a></li>
-                        <li><a href="#services">Lead Generation</a></li>
-                        <li><a href="#services">Customer Support</a></li>
-                        <li><a href="#services">Email & SMS Automation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#testimonials">Case Studies</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>Email: hello@medprompt.ai</p>
-                    <p>Phone: (555) 123-4567</p>
-                    <p>Available 24/7 for support</p>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Security</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 MedPrompt. All rights reserved.</p>
+                <p>&copy; 2025 MedPrompt. All rights reserved.</p>
             </div>
         </div>
     </footer>
