@@ -128,17 +128,7 @@ The website is specifically designed for MedPrompt's target audience:
 - **Edge** (latest)
 - **Mobile browsers** (iOS Safari, Chrome Mobile)
 
-## 📞 Contact Information
-
-For questions about this website or MedPrompt services:
-- **Email**: hello@medprompt.ai
-- **Phone**: (555) 123-4567
-- **Website**: [Your domain here]
 
 ## 📄 License
 
 This website template is created for MedPrompt. All rights reserved.
-
----
-
-**Built with ❤️ for the medical aesthetics industry** 
