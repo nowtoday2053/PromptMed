@@ -249,6 +249,11 @@ p {
     text-align: center;
 }
 
+.hero-main-text {
+    white-space: nowrap;
+    display: inline-block;
+}
+
 .hero-subtitle-text {
     background: linear-gradient(135deg, #007aff, #5856d6);
     -webkit-background-clip: text;
@@ -983,7 +988,7 @@ p {
     }
     
     .hero {
-        padding: 60px 0 30px;
+        padding: 100px 0 30px;
     }
     
     .hero-container {
@@ -995,15 +1000,17 @@ p {
     }
     
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
         line-height: 1.1;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        margin-top: 1rem;
     }
     
     .hero-description {
         font-size: 1rem;
         margin-bottom: 1.5rem;
         padding: 0 10px;
+        line-height: 1.5;
     }
     
     .phone-mockup {
@@ -1108,20 +1115,17 @@ p {
 
 /* Extra small devices */
 @media (max-width: 320px) {
-    h1 {
-        font-size: 2rem;
+    .hero-main-text {
+        white-space: normal;
+        line-height: 1.1;
     }
     
-    h2 {
-        font-size: 1.75rem;
+    .hero-title {
+        font-size: 1.8rem;
     }
     
     .hero-description {
-        font-size: 1.125rem;
-    }
-    
-    .section-header p {
-        font-size: 1.125rem;
+        font-size: 0.95rem;
     }
 }
 
