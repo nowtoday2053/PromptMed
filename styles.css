@@ -991,9 +991,7 @@ p {
     }
     
     .hero-badge {
-        margin-bottom: 1.5rem;
-        font-size: 0.8rem;
-        padding: 6px 14px;
+        display: none;
     }
     
     .hero-title {
