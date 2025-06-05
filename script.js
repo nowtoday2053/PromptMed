@@ -1,3 +1,9 @@
+// ===== VERCEL ANALYTICS =====
+import { inject } from '@vercel/analytics';
+
+// Initialize analytics
+inject();
+
 // ===== MODERN JAVASCRIPT WITH APPLE-INSPIRED ANIMATIONS =====
 
 document.addEventListener('DOMContentLoaded', function() {
